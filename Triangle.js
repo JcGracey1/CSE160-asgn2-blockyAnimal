@@ -56,6 +56,7 @@ function drawTriangle(vertices) {
   }
   
   function drawTriangle3D(vertices) {
+    //console.log("calling 3D triangle");
     var n = 3; // The number of vertices
   
     // Create a buffer object

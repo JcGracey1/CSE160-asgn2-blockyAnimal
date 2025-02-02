@@ -9,37 +9,21 @@
     <canvas id="webgl" width="400" height="400">
     Please use a browser that supports "canvas"
     </canvas>
+    <canvas id="overlay" width="600" height="400" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas>
     <p>
       
     <p id="numdot"> XXX </p>
 
-    <p>
-    <button type="button" id="green">Green</button>
-    <button type="button" id="red">Red</button>
-    <button type="button" id="clearButton">Clear</button>
-    <p>
-
-    <button type="button" id="pointButton">Point</button>
-    <button type="button" id="triangleButton">Triangle</button>
-    <button type="button" id="circleButton">Circle</button>
 
     <p>
-      Red <input type="range" id="redSlide" min="0" max="100" value="0" class="slider">
+      Move Neck <input type="range" id="jointSlide" min="-15" max="15" value="0" class="slider">
+      Animation:
+      <button type="button" id="animateOn">ON</button>
+      <button type="button" id="animateOff">OFF</button>
     <p>
-      Green <input type="range" id="greenSlide" min="0" max="100" value="0" class="slider">
+      Move Head <input type="range" id="headSlide" min="-12" max="15" value="0" class="slider">
     <p>
-      Blue <input type="range" id="blueSlide" min="0" max="100" value="0" class="slider">
-    
-    <p>
-      Size <input type="range" id="sizeSlide" min="5" max="40" value="0" class="slider">
-    <p>
-      Segments <input type="range" id="segmentsSlide" min="8" max="20" value="8" class="slider">
-
-    <p>
-      Opacity <input type="range" id="opacitySlide" min="0" max="100" value="100" class="slider">
-
-    <p>
-      Camera Angle <input type="range" id="angleSlide" min="0" max="90" value="5" class="slider">
+      Camera Angle <input type="range" id="angleSlide" min="0" max="360" value="15" class="slider">
     </p>
 
     <script src="lib/cuon-matrix.js"></script>
@@ -50,6 +34,7 @@
     <script src="Triangle.js"></script>
     <script src="Circle.js"></script>
     <script src="Cube.js"></script>
+    <script src="Cylinder.js"></script>
     <script src="BlockyAnimal.js"></script>
 
   </body>

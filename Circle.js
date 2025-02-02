@@ -1,4 +1,5 @@
 class Circle{
+
     constructor(){
         this.type = 'circle';
         this.position = [0.0, 0.0,0.0];
@@ -24,6 +25,7 @@ class Circle{
             let p1 = [centerPt[0]+Math.sin(angle1/180*Math.PI)*d, centerPt[1]-Math.cos(angle1/180*Math.PI)*d];
             let p2 = [centerPt[0]+Math.sin(angle2/180*Math.PI)*d, centerPt[1]-Math.cos(angle2/180*Math.PI)*d];
             
+            //make this 3d
             drawTriangle([xy[0], xy[1], p1[0], p1[1], p2[0], p2[1]]);
         }
 
