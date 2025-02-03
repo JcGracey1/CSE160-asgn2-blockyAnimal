@@ -489,7 +489,7 @@ function renderAllShapes() {
   }
 
   var duration = performance.now() - startTime;
-  //sendTextToHtml(' fps: ' + Math.floor(1000 / duration)/10, "numdot");
+  sendTextToHtml(' fps: ' + Math.floor(1000 / duration)/10, "numdot");
 }
 
 function sendTextToHtml(text, htmlID) {
