@@ -1,7 +1,7 @@
 // CREDIT: Eric Martinez
 class Cylinder{
     constructor() {
-      this.type = 'Cylinder';
+      this.type = 'cylinder';
       this.position = [0.0, 0.0, 0.0];
       this.color = [1.0, 1.0, 1.0, 1.0];
       this.size = 5.0;

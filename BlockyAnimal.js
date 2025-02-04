@@ -206,10 +206,12 @@ var g_startTime = performance.now()/100.0;
 var g_seconds = performance.now()/1000.0*g_startTime;
 function tick(){
   // debug
-  g_seconds = performance.now()/1000.0*g_startTime;
+  let currentTime = performance.now() / 1000;
+  let deltaTime = currentTime - g_startTime;
+  g_startTime = currentTime;
  // console.log(g_seconds);
 
-  updateAnimationAngles();
+  updateAnimationAngles(deltaTime);
   // draw everything
   renderAllShapes();
 
@@ -221,8 +223,9 @@ let g_tailBaseAngle = 0;
 let g_tailMidAngle = 0;
 let g_tailTipAngle = 0;
 let g_specialAnimate = false;
-function updateAnimationAngles(){
+function updateAnimationAngles(deltaTime){
   let currentTime = performance.now() / 1000;
+  g_seconds += deltaTime;
   if(g_animate){
     g_jointAngle =(15*Math.sin(g_seconds));
   }
